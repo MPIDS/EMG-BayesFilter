@@ -36,6 +36,10 @@ function [map, posterior] = BayesFilter(emg, prior, pbins, param)
     newPrior = (dt * param.alpha * ...
         ([prior(1);prior(1:end-1)] - 2*prior + [prior(2:end);prior(end)])/ ...
         dsigma^2 + dt * param.beta + (1 - dt * param.beta) * prior );
+    % NOTE: For the explicit finite difference method to be stable, 
+    % the grid spacing in the time domain and grid spacing in the state 
+    % variable domain sigma must satisfy the following inequality
+    % dt < alpha/(2*dsigma^2)
 
     % compute likelihood (assumption of independence => product of
     % likelihoods for each emg sample)
