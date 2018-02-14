@@ -1,8 +1,8 @@
 function [map, posterior] = BayesFilter(emg, prior, pbins, param)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Improved version of Bayes-Chapman-Kolmogorov filter proposed in      %
-% T. Sanger 2007                                                       % 
-% Author: David Hofmann   -   david@nld.ds.mpg.de                      %
+% T. Sanger 2007                                                       %
+% Author: David Hofmann   -   david.hofmann@mytum.de                   %
 % Affiliation: Max Planck Institute for Dynamics and Self-Organization %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % emg:   N dimensional data vector (can be one sample, N = 1).
