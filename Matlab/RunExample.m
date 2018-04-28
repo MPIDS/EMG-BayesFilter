@@ -28,6 +28,7 @@ for j = 1:size(x,2)
         [bayesSTD(i,j), pri] = BayesFilter(x(i,j), pri, sig, param);
     end
 end
+bayesSTD = bayesSTD * param.sigmaMVC;
 % plot results
 time = [0:length(x)-1]/param.sf;
 plot(time, bayesSTD,'.','linewidth',1)
